@@ -1,0 +1,71 @@
+<div class="head">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="span6">
+                    <h1 class="muted">Movie Watch</h1>
+                </div>
+
+                <div class="span4 offset2" style="margin-top:15px">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="/#/boxoffice">Boxoffice</a>
+                        </li>
+
+                        <li>
+                            <a href="/#/in_theaters">In Theaters</a>
+                        </li>
+                        <li>
+                            <a href="/#/upcoming">Upcoming</a>
+                        </li>
+                        <li>
+                            <a href="/#/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+
+<div class="container">
+  <div class="row">
+        <div class="span12">
+        <div class="span9">
+          <input type="text" name="" value="" placeholder="Search movies" ng-model="search.title" class="pull-right">
+        </div>
+
+        <ul class="thumbnails">
+                <li ng-repeat="movie in in_theaters | filter:search " class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="{{movie.poster_profile}}" alt="{{movie.title}}" class="pull-left span2 clearfix" style="margin-right:10px">
+                    <div class="caption" class="pull-left">
+                      <h4>      
+                      <a href="#">{{ movie.title }}</a>
+                      {{}}
+                      </h4>
+                      <b>Release Date:</b> {{ movie.release_dates}} <br>
+                      <b>Audience Rating: </b> {{movie.audience_rating}}<br>
+                      <b>Critics Score: </b> {{ movie.critics_score }}  <br>
+                      <b>Audience Score: </b> {{movie.audience_score}} <br>
+                      <b>Critics Consensus: </b> {{movie.critics_consensus}}<br>
+                      <!-- <b>Casts: </b> {{movie.abridged_cast}} <br>  -->
+                      <b>Genre:</b> {{movie.genre}} <br>   
+                      <b>Synopsis: </b>{{ movie.synopsis | words:30}} <br>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+        </div>
+  </div>
+</div>
