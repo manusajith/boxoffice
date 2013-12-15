@@ -38,7 +38,7 @@
         </div>
       </div>
 
-<div class="container">
+<div class="container" ng-show="box_office.length > 0">
   <div class="row">
         <div class="span12">
         <div class="span9">
@@ -65,5 +65,11 @@
                 </li>
             </ul>
         </div>
+  </div>
+</div>
+<div ng-show="box_office.length == 0">
+  <div id="loading">
+    <p>Loading...</p>
+    <div></div>
   </div>
 </div>
